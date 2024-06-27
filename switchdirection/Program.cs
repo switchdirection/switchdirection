@@ -6,6 +6,7 @@
         {
             DisplayMonth();
             TypeOfTheYear();
+            CheckParity();
         }
 
         static void DisplayMonth()
@@ -103,6 +104,25 @@
             else if (monthNumber >= 9 && monthNumber <= 11)
             {
                 Console.WriteLine("Это Осень!");
+            }
+        }
+
+        public static void CheckParity()
+        {
+            Console.Write("Введите число: ");
+            int number;
+            if(int.TryParse(Console.ReadLine(), out number)) { }
+            else 
+            {
+                Console.WriteLine("Введите корректное значение");
+            }
+            if(number %2 == 0)
+            {
+                Console.WriteLine("Число чётное");
+            }
+            else
+            {
+                Console.WriteLine("Число нечётное");
             }
         }
     }
