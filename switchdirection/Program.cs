@@ -79,31 +79,6 @@
                         Console.WriteLine("Это Декабрь!");
                         break;
                     }
-
-            }
-        }
-
-        public static void TypeOfTheYear()
-        {
-            Console.Write("Введите номер месяца: ");
-            byte monthNumber;
-            if(byte.TryParse(Console.ReadLine(), out monthNumber) && monthNumber > 0 && monthNumber <=12) { }
-            else { Console.WriteLine("Вы ввели не корректный номер месяца."); }
-            if(monthNumber >= 1 && monthNumber <= 2 || monthNumber ==12) 
-            {
-                Console.WriteLine("Это Зима!");
-            }
-            else if(monthNumber >= 3 && monthNumber <= 5)
-            {
-                Console.WriteLine("Это Весна!");
-            }
-            else if(monthNumber >= 6 && monthNumber <= 8)
-            {
-                Console.WriteLine("Это Лето!");
-            }
-            else if(monthNumber>=9 && monthNumber <= 11) 
-            {
-                Console.WriteLine("Это Осень!");
             }
         }
     }
