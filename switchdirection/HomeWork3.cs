@@ -1,6 +1,6 @@
 ﻿namespace switchdirection
 {
-    internal class Program
+    internal class HomeWork3
     {
         static void Main(string[] args)
         {
