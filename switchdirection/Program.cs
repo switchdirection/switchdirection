@@ -82,7 +82,6 @@
                         Console.WriteLine("Это Декабрь!");
                         break;
                     }
-
             }
         }
         public static void TypeOfTheYear()
