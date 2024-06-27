@@ -82,7 +82,6 @@
 
             }
         }
-
         public static void TypeOfTheYear()
         {
             Console.Write("Введите номер месяца: ");
