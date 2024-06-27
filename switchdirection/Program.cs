@@ -7,6 +7,8 @@
             DisplayMonth();
             TypeOfTheYear();
             CheckParity();
+            CheckTemperature();
+            ColorOfTheRainbow();
         }
 
         static void DisplayMonth()
@@ -123,6 +125,80 @@
             else
             {
                 Console.WriteLine("Число нечётное");
+            }
+        }
+
+        public static void CheckTemperature()
+        {
+            Console.Write("Введите температуру на улице: ");
+            short temperature;
+            if(short.TryParse(Console.ReadLine(),out temperature)) { }
+            else
+            {
+                Console.WriteLine("Введите корректное значение для температуры");
+            }
+
+            if(temperature > -5)
+            {
+                Console.WriteLine("Тепло");
+            }
+            else if(temperature < -5 && temperature > -20) 
+            {
+                Console.WriteLine("Нормально");
+            }
+            else
+            {
+                Console.WriteLine("Холодно");
+            }
+        }
+
+        public static void ColorOfTheRainbow()
+        {
+            Console.Write("Введите номер: ");
+            byte numberOfColor;
+            if (byte.TryParse(Console.ReadLine(), out numberOfColor) && numberOfColor > 0 && numberOfColor <=7) { }
+            else
+            {
+                Console.WriteLine("Введите корректное значение номера");
+            }
+
+            switch(numberOfColor)
+            {
+                case 1:
+                    {
+                        Console.WriteLine("Это красный!");
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.WriteLine("Это оранжевый!");
+                        break;
+                    }
+                case 3:
+                    {
+                        Console.WriteLine("Это жёлтый!");
+                        break;
+                    }
+                case 4:
+                    {
+                        Console.WriteLine("Это зелёный!");
+                        break;
+                    }
+                case 5:
+                    {
+                        Console.WriteLine("Это голубой!");
+                        break;
+                    }
+                case 6:
+                    {
+                        Console.WriteLine("Это синий!");
+                        break;
+                    }
+                case 7:
+                    {
+                        Console.WriteLine("Это фазан!");
+                        break;
+                    }
             }
         }
     }
