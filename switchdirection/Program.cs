@@ -4,9 +4,10 @@
     {
         static void Main(string[] args)
         {
-            DisplayMonth();
+            /*DisplayMonth();
             TypeOfTheYear();
-            CheckParity();
+            CheckParity();*/
+            CheckTemperature();
         }
 
         static void DisplayMonth()
@@ -123,6 +124,30 @@
             else
             {
                 Console.WriteLine("Число нечётное");
+            }
+        }
+
+        public static void CheckTemperature()
+        {
+            Console.Write("Введите температуру на улице: ");
+            short temperature;
+            if(short.TryParse(Console.ReadLine(),out temperature)) { }
+            else
+            {
+                Console.WriteLine("Введите корректное значение для температуры");
+            }
+
+            if(temperature > -5)
+            {
+                Console.WriteLine("Тепло");
+            }
+            else if(temperature < -5 && temperature > -20) 
+            {
+                Console.WriteLine("Нормально");
+            }
+            else
+            {
+                Console.WriteLine("Холодно");
             }
         }
     }
