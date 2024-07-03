@@ -6,16 +6,16 @@ namespace HomeWork4
     {
         static void Main(string[] args)
         {
-            /*FirstCyclesTask();
+            FirstCyclesTask();
             SecondCyclesTask();
             ThirdCyclesTask();
             FourthCyclesTask();
             FifthCyclesTask();
-            SixCyclesTask();*/
+            SixCyclesTask();
 
-            //FirstArraysTask();
-            //SecondArraysTask();
-            //ThirdArraysTask();
+            FirstArraysTask();
+            SecondArraysTask();
+            ThirdArraysTask();
             FourthArraysTask();
         }
 
