@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork3", "switchdirection\HomeWork3.csproj", "{1E7090F3-7055-43F1-BF6A-25DFA09BB6D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasksFromManualHomeWork3", "switchdirection\TasksFromManualHomeWork3.csproj", "{1E7090F3-7055-43F1-BF6A-25DFA09BB6D5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Calculator\Calculator.csproj", "{8393F153-0BB8-49DF-922D-E381BB49CFE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork4", "HomeWork4\HomeWork4.csproj", "{F73509C5-5E49-45C3-AFB5-686F654E557B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasksFromManualHomeWork4", "HomeWork4\TasksFromManualHomeWork4.csproj", "{F73509C5-5E49-45C3-AFB5-686F654E557B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixFromPresentationHomeWork4", "MatrixFromPresentationHomeWork4\MatrixFromPresentationHomeWork4.csproj", "{49846F33-2741-4079-A290-3BE59B83AB94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixFromPresentationHomeWork4", "MatrixFromPresentationHomeWork4\MatrixFromPresentationHomeWork4.csproj", "{49846F33-2741-4079-A290-3BE59B83AB94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdditionalTasksHomeWork4", "AdditionalTasksHomeWork4\AdditionalTasksHomeWork4.csproj", "{B7779E6F-925B-4BAD-A52F-D77EA5C313D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdditionalTasksHomeWork4", "AdditionalTasksHomeWork4\AdditionalTasksHomeWork4.csproj", "{B7779E6F-925B-4BAD-A52F-D77EA5C313D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksFromManualHomeWork5", "TasksFromManualHomeWork5\TasksFromManualHomeWork5.csproj", "{28A3A2D9-5980-40F2-A2AC-F6410461ACD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B7779E6F-925B-4BAD-A52F-D77EA5C313D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7779E6F-925B-4BAD-A52F-D77EA5C313D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7779E6F-925B-4BAD-A52F-D77EA5C313D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A3A2D9-5980-40F2-A2AC-F6410461ACD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A3A2D9-5980-40F2-A2AC-F6410461ACD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A3A2D9-5980-40F2-A2AC-F6410461ACD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A3A2D9-5980-40F2-A2AC-F6410461ACD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
