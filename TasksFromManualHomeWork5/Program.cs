@@ -12,6 +12,7 @@ namespace TasksFromManualHomeWork5
             ManualTasks.LowerCaseLettersInFormat(argument);
             ManualTasks.UpperCaseLettersInFormat(argument);
             ManualTasks.CheckIfAStringStartingWithASequence(argument);
+            ManualTasks.CheckIfAStringEndsWithASequence(argument);
         }
 
         
