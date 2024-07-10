@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdditionalTasksFromManualHo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasksFromPresentationHomeWork5", "TasksFromPresentationHomeWork5\TasksFromPresentationHomeWork5.csproj", "{5658137E-0377-4938-AD2D-E3FC683ADF1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksFromManualHomeWork6", "TasksFromManualHomeWork6-7\TasksFromManualHomeWork6.csproj", "{04129170-97FD-43C6-835D-EC7C2431CE26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksFromManualHomeWork6-", "TasksFromManualHomeWork6-7\TasksFromManualHomeWork6-.csproj", "{04129170-97FD-43C6-835D-EC7C2431CE26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdditionalTaskFromManualHomeWork6", "AdditionalTaskFromManualHomeWork6\AdditionalTaskFromManualHomeWork6.csproj", "{7E14F4B0-E7C0-4C03-85E4-B978A2CA6F95}"
 EndProject
