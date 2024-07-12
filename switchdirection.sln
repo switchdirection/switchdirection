@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdditionalTaskFromManualHom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksFromManualHomeWork7", "TasksFromManualHomeWork7\TasksFromManualHomeWork7.csproj", "{0E693A2F-4A99-4E45-BD40-7580991B2D8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductInventoryProjectHomeWork7", "ProductInventoryProjectHomeWork7\ProductInventoryProjectHomeWork7.csproj", "{5940B7D7-5574-4171-BAD7-39225CC53DAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{0E693A2F-4A99-4E45-BD40-7580991B2D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E693A2F-4A99-4E45-BD40-7580991B2D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E693A2F-4A99-4E45-BD40-7580991B2D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5940B7D7-5574-4171-BAD7-39225CC53DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5940B7D7-5574-4171-BAD7-39225CC53DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5940B7D7-5574-4171-BAD7-39225CC53DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5940B7D7-5574-4171-BAD7-39225CC53DAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
