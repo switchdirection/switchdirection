@@ -113,7 +113,6 @@
     {
         static void Main(string[] args)
         {
-            мфк
             Phone phone = new Phone();
             Phone phone1 = new Phone("+375(44)682-42-54", "Apple Iphone 14");
             Phone phone2 = new Phone("+375(33)512-53-12", "Xiami Redme 11 Note", 190.5);
