@@ -6,7 +6,8 @@
         private string _model;
         private double _weight;
 
-        public string Number {
+        public string Number
+        {
             get
             {
                 return _number;
@@ -89,13 +90,13 @@
 
         public void sendMessage(params string[] numbers)
         {
-            if(numbers.Length == 0)
+            if (numbers.Length == 0)
             {
                 Console.WriteLine("Нет номер на которые можно отправить сообщение.\n");
             }
             else
             {
-                foreach(var number in numbers)
+                foreach (var number in numbers)
                 {
                     Console.WriteLine($"С номера {this.Number} было отправленно сообщение на номер: {number}");
                 }
@@ -140,7 +141,7 @@
             Console.WriteLine("Перегруженный звонок на phone: \t");
             phone.recieveCall("+375(44)231-31-32", "Иван");
             Console.WriteLine("Перегруженный звонок на phone: \t");
-            phone.recieveCall("+375(44)231-31-51","Степан");
+            phone.recieveCall("+375(44)231-31-51", "Степан");
             Console.WriteLine("Перегруженный звонок на phone: \t");
             phone.recieveCall("+375(44)231-44-41", "Елена");
             ConsoleToWhite();
