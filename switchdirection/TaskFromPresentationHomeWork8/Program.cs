@@ -4,7 +4,7 @@
     {
         string _name;
 
-        public string Name
+        public string  Name
         {
             get { return _name; }
             set { _name = value; }
@@ -42,7 +42,7 @@
         static void Main(string[] args)
         {
             string name;
-            while (true)
+            while(true)
             {
                 Console.Write("Введте имя для собачки: ");
                 name = Console.ReadLine();
@@ -59,7 +59,7 @@
             Dog dog = new Dog(name);
             string oldName = dog.getName();
             dog.setName("Muha");
-            string newName = dog.getName();
+            string newName = dog.getName(); 
             dog.setName(oldName);
             dog.Eat();
             Console.WriteLine($"Имя которое вы ввели для собаки: {oldName}" +
