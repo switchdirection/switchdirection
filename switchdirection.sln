@@ -27,11 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductInventoryProjectHome
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductInventoryProjectWithStructsHomeWork7", "ProductInventoryProjectWithStructsHomeWork7\ProductInventoryProjectWithStructsHomeWork7.csproj", "{304F95B9-C043-44B0-84FE-89DB2F9FFC85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksFromManualHomeWork6", "TasksFromManualHomeWork6\TasksFromManualHomeWork6.csproj", "{CB0D495F-58E6-4A2D-BA66-0AD4E46A9841}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasksFromManualHomeWork6", "TasksFromManualHomeWork6\TasksFromManualHomeWork6.csproj", "{CB0D495F-58E6-4A2D-BA66-0AD4E46A9841}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFromPresentationHomeWork8", "TaskFromPresentationHomeWork8\TaskFromPresentationHomeWork8.csproj", "{47D86CE1-ADE1-4C6E-B46C-392FED94D482}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskFromPresentationHomeWork8", "TaskFromPresentationHomeWork8\TaskFromPresentationHomeWork8.csproj", "{47D86CE1-ADE1-4C6E-B46C-392FED94D482}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksFromManualHomeWork8", "TasksFromManualHomeWork8\TasksFromManualHomeWork8.csproj", "{0E664245-1F3B-4830-9159-A5902619B0AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasksFromManualHomeWork8", "TasksFromManualHomeWork8\TasksFromManualHomeWork8.csproj", "{0E664245-1F3B-4830-9159-A5902619B0AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdditionalTaskFromManualHomeWork8", "AdditionalTaskFromManualHomeWork8\AdditionalTaskFromManualHomeWork8.csproj", "{18A71994-EC0B-4D42-986F-DB1973BF11EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{0E664245-1F3B-4830-9159-A5902619B0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E664245-1F3B-4830-9159-A5902619B0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E664245-1F3B-4830-9159-A5902619B0AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A71994-EC0B-4D42-986F-DB1973BF11EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A71994-EC0B-4D42-986F-DB1973BF11EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A71994-EC0B-4D42-986F-DB1973BF11EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A71994-EC0B-4D42-986F-DB1973BF11EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
