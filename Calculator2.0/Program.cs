@@ -1,26 +1,40 @@
-﻿using System.ComponentModel;
-using static Calculator.Program;
-
-namespace Calculator
+﻿namespace Calculator2._0
 {
     internal class Program
     {
+        public delegate void Add(double firstValue, double secondValue);
+        public delegate void Substract(double firstValue, double secondValue);
+        public delegate void Multiply(double firstValue, double secondValue);
+        public delegate void Division(double firstValue, double secondValue);
+        public delegate void Pow(double firstValue, double secondValue, double pow1, double pow2);
+        public delegate void Root(double firstValue, double secondValue);
+        public delegate void FindSin(double firstValue, double secondValue);
+        public delegate void FindCos(double firstValue, double secondValue);
 
         static void Main(string[] args)
         {
+
             Calculator();
         }
-
-        public static void Calculator() {
+        public static void Calculator()
+        {
+            Add add = AddFunc;
+            Substract substract = SubstractFunc;
+            Multiply multiply = MultiplyFunc;
+            Division divide = DivisionFunc;
+            Pow pow = PowFunc;
+            Root root = RootFunk;
+            FindCos cos = FindCosFunc;
+            FindSin sin = FindSinFunc;
             bool key = true;
             while (key)
             {
-                reWrote:
+            reWrote:
                 double firstValue, secondValue;
                 while (true)
                 {
                     Console.Write("Введите первое число: ");
-                    if(double.TryParse(Console.ReadLine(),out firstValue)){ break; }
+                    if (double.TryParse(Console.ReadLine(), out firstValue)) { break; }
                     else
                     {
                         Console.WriteLine("Вы ввелие не корректное число");
@@ -57,13 +71,14 @@ namespace Calculator
                     {
                         case 1:
                             {
-                                Console.WriteLine($"Результат: {firstValue} + {secondValue} = {firstValue + secondValue}");
+                                add(firstValue, secondValue);
                                 Thread.Sleep(3000);
                                 Console.Clear();
                                 break;
                             }
                         case 2:
                             {
+                                substract(firstValue, secondValue);
                                 Console.WriteLine($"Результат: {firstValue} - {secondValue} = {firstValue - secondValue}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
@@ -71,6 +86,7 @@ namespace Calculator
                             }
                         case 3:
                             {
+                                multiply(firstValue, secondValue);
                                 Console.WriteLine($"Результат: {firstValue} * {secondValue} = {firstValue * secondValue}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
@@ -78,7 +94,7 @@ namespace Calculator
                             }
                         case 4:
                             {
-                                if(secondValue == 0)
+                                if (secondValue == 0)
                                 {
                                     while (true)
                                     {
@@ -90,8 +106,9 @@ namespace Calculator
                                             continue;
                                         }
                                     }
-                                    
+
                                 }
+                                divide(firstValue, secondValue);
                                 Console.WriteLine($"Результат: {firstValue} / {secondValue} = {Math.Round((firstValue / secondValue), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
@@ -122,6 +139,7 @@ namespace Calculator
                                     }
                                 }
 
+                                pow(firstValue, secondValue, pow1, pow2);
                                 Console.WriteLine($"Результат: \n{firstValue}^{pow1} = {Math.Round(Math.Pow(firstValue, pow1), 5)}\n{secondValue}^{pow2} = {Math.Round(Math.Pow(secondValue, pow2), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
@@ -129,6 +147,7 @@ namespace Calculator
                             }
                         case 6:
                             {
+                                root(firstValue, secondValue);
                                 Console.WriteLine($"Результат: \nsqrt({firstValue}) = {Math.Round(Math.Sqrt(firstValue), 5)}\nsqrt({secondValue}) = {Math.Round(Math.Sqrt(secondValue), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
@@ -136,17 +155,19 @@ namespace Calculator
                             }
                         case 7:
                             {
-                                Console.WriteLine($"Результат: \ncos({firstValue}) = {Math.Round(Math.Cos(firstValue), 5)}\ncos({secondValue}) = {Math.Round(Math.Cos(secondValue),5)}");
+                                cos(firstValue, secondValue);
+                                Console.WriteLine($"Результат: \ncos({firstValue}) = {Math.Round(Math.Cos(firstValue), 5)}\ncos({secondValue}) = {Math.Round(Math.Cos(secondValue), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
                                 break;
                             }
                         case 8:
                             {
+                                sin(firstValue, secondValue);
                                 Console.WriteLine($"Результат: \nsin({firstValue}) = {Math.Round(Math.Sin(firstValue), 5)}\nsin({secondValue}) = {Math.Round(Math.Sin(secondValue), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
-                                break;  
+                                break;
                             }
                         case 9:
                             {
@@ -162,12 +183,44 @@ namespace Calculator
                     }
                 }
 
-                
-                
+
+
 
             }
         }
 
-       
+        public static void AddFunc(double firstValue, double secondValue)
+        {
+            Console.WriteLine($"Результат: {firstValue} + {secondValue} = {firstValue + secondValue}");
+        }
+
+        public static void SubstractFunc(double firstValue, double secondValue)
+        {
+            Console.WriteLine($"Результат: {firstValue} - {secondValue} = {firstValue - secondValue}");
+        }
+        public static void MultiplyFunc(double firstValue, double secondValue)
+        {
+            Console.WriteLine($"Результат: {firstValue} * {secondValue} = {firstValue * secondValue}");
+        }
+        public static void DivisionFunc(double firstValue, double secondValue)
+        {
+            Console.WriteLine($"Результат: {firstValue} / {secondValue} = {firstValue / secondValue}");
+        }
+        public static void PowFunc(double firstValue, double secondValue, double pow1, double pow2)
+        {
+            Console.WriteLine($"Результат: \n{firstValue}^{pow1} = {Math.Round(Math.Pow(firstValue, pow1), 5)}\n{secondValue}^{pow2} = {Math.Round(Math.Pow(secondValue, pow2), 5)}");
+        }
+        public static void RootFunk(double firstValue, double secondValue)
+        {
+            Console.WriteLine($"Результат: \nsqrt({firstValue}) = {Math.Round(Math.Sqrt(firstValue), 5)}\nsqrt({secondValue}) = {Math.Round(Math.Sqrt(secondValue), 5)}");
+        }
+        public static void FindSinFunc(double firstValue, double secondValue)
+        {
+            Console.WriteLine($"Результат: \nsin({firstValue}) = {Math.Round(Math.Sin(firstValue), 5)}\nsin({secondValue}) = {Math.Round(Math.Sin(secondValue), 5)}");
+        }
+        public static void FindCosFunc(double firstValue, double secondValue)
+        {
+            Console.WriteLine($"Результат: \ncos({firstValue}) = {Math.Round(Math.Cos(firstValue), 5)}\ncos({secondValue}) = {Math.Round(Math.Cos(secondValue), 5)}");
+        }
     }
 }
