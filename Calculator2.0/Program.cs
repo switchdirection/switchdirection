@@ -79,7 +79,6 @@
                         case 2:
                             {
                                 substract(firstValue, secondValue);
-                                Console.WriteLine($"Результат: {firstValue} - {secondValue} = {firstValue - secondValue}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
                                 break;
@@ -87,7 +86,6 @@
                         case 3:
                             {
                                 multiply(firstValue, secondValue);
-                                Console.WriteLine($"Результат: {firstValue} * {secondValue} = {firstValue * secondValue}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
                                 break;
@@ -109,7 +107,6 @@
 
                                 }
                                 divide(firstValue, secondValue);
-                                Console.WriteLine($"Результат: {firstValue} / {secondValue} = {Math.Round((firstValue / secondValue), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
                                 break;
@@ -140,7 +137,6 @@
                                 }
 
                                 pow(firstValue, secondValue, pow1, pow2);
-                                Console.WriteLine($"Результат: \n{firstValue}^{pow1} = {Math.Round(Math.Pow(firstValue, pow1), 5)}\n{secondValue}^{pow2} = {Math.Round(Math.Pow(secondValue, pow2), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
                                 break;
@@ -148,7 +144,6 @@
                         case 6:
                             {
                                 root(firstValue, secondValue);
-                                Console.WriteLine($"Результат: \nsqrt({firstValue}) = {Math.Round(Math.Sqrt(firstValue), 5)}\nsqrt({secondValue}) = {Math.Round(Math.Sqrt(secondValue), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
                                 break;
@@ -156,7 +151,6 @@
                         case 7:
                             {
                                 cos(firstValue, secondValue);
-                                Console.WriteLine($"Результат: \ncos({firstValue}) = {Math.Round(Math.Cos(firstValue), 5)}\ncos({secondValue}) = {Math.Round(Math.Cos(secondValue), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
                                 break;
@@ -164,7 +158,6 @@
                         case 8:
                             {
                                 sin(firstValue, secondValue);
-                                Console.WriteLine($"Результат: \nsin({firstValue}) = {Math.Round(Math.Sin(firstValue), 5)}\nsin({secondValue}) = {Math.Round(Math.Sin(secondValue), 5)}");
                                 Thread.Sleep(3000);
                                 Console.Clear();
                                 break;
