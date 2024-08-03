@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator2.0", "Calculator
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskFromPresentationHomeWork12", "TaskFromPresentationHomeWork12\TaskFromPresentationHomeWork12.csproj", "{72D0A405-51A3-4F9E-B507-0A1437244449}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFromPresentationHomeWork13", "TaskFromPresentationHomeWork13\TaskFromPresentationHomeWork13.csproj", "{6EA5D687-85EE-4F20-A201-8FE3C0DB3F62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskFromPresentationHomeWork13", "TaskFromPresentationHomeWork13\TaskFromPresentationHomeWork13.csproj", "{6EA5D687-85EE-4F20-A201-8FE3C0DB3F62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdditionTaskFromPresentationHomeWork13", "AdditionTaskFromPresentationHomeWork13\AdditionTaskFromPresentationHomeWork13.csproj", "{E06E9BC8-311C-4D84-AB47-2F438014E6A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{6EA5D687-85EE-4F20-A201-8FE3C0DB3F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EA5D687-85EE-4F20-A201-8FE3C0DB3F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EA5D687-85EE-4F20-A201-8FE3C0DB3F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E06E9BC8-311C-4D84-AB47-2F438014E6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E06E9BC8-311C-4D84-AB47-2F438014E6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E06E9BC8-311C-4D84-AB47-2F438014E6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E06E9BC8-311C-4D84-AB47-2F438014E6A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
