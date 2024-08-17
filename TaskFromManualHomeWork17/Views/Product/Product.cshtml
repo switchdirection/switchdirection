@@ -1,0 +1,132 @@
+﻿@model List<ProductModel>
+@{
+    ViewData["Title"] = "Product";
+}
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        display: none;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+</style>
+
+<form asp-controller="Product" asp-action="ProductAdd" method="post">
+    <div class="form-group">
+        <label for="id">Product ID:</label>
+        <input type="number" class="form-control" id="id" name="id" required>
+    </div>
+    <div class="form-group">
+        <label for="name">Product Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="amount">Product Amount:</label>
+        <input type="number" class="form-control" id="amount" name="amount" required>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 20px;" >Добавить продукт</button>
+</form>
+
+
+<h1>Список продуктов:</h1>
+<button type="button" class="btn btn-primary" onclick="showTable()">Показать таблицу</button>
+<button type="button" class="btn btn-primary" onclick="hideTable()">Скрыть таблицу</button>
+<table id="productTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ProductId</td>
+                <td>@product.ProductName</td>
+                <td>@product.ProductAmount</td>
+                <td>@product.Category</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h1>Продукт по ID:</h1>
+<form asp-controller="Product" asp-action="ProductIdGet" method="post">
+    <div class="form-group">
+        <label for="id">Product ID:</label>
+        <input type="number" class="form-control" id="id" name="id" required>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Найти продукт</button>
+</form>
+
+@if (ViewBag.Product != null)
+{
+    var product = (ProductModel)ViewBag.Product;
+    <h2>Product Details</h2>
+    <p><strong>ID:</strong> @product.ProductId</p>
+    <p><strong>Name:</strong> @product.ProductName</p>
+    <p><strong>Amount:</strong> @product.ProductAmount</p>
+    <p><strong>Category:</strong> @product.Category</p>
+}
+else if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+
+<h1>Количество продуктов:</h1>
+<form asp-controller="Product" asp-action="ProductsAmountGet" method="post">
+    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Посчитать количество</button>
+</form>
+
+@if (ViewBag.Amount != null)
+{
+    var amount = (int?)ViewBag.Amount;
+    <p style="margin-top: 10px"><strong>Amount:</strong> @amount</p>
+}
+else if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+
+<h1>Количество по категории:</h1>
+<form asp-controller="Product" asp-action="ProductsCategoryAmountGet" method="post">
+    <div class="form-group">
+        <label for="category">Product category:</label>
+        <input type="text" class="form-control" id="category" name="category" required>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Посчитать количество</button>
+</form>
+
+@if (ViewBag.CategoryAmount != null)
+{
+    var catAm = (int?)ViewBag.CategoryAmount;
+    <p><strong>Category Amount:</strong> @catAm</p>
+}
+else if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+
+<script>
+    function showTable() {
+        var table = document.getElementById("productTable");
+        table.style.display = "table";
+    }
+
+    function hideTable() {
+        var table = document.getElementById("productTable");
+        table.style.display = "none";
+    }
+</script>
