@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TaskFromManualHomeWork17.Filters;
 using TaskFromManualHomeWork17.Models;
 
 namespace TaskFromManualHomeWork17.Controllers
@@ -16,6 +17,7 @@ namespace TaskFromManualHomeWork17.Controllers
             new ProductModel() { ProductId = 8, ProductName = "Jacket", ProductAmount = 87, Category="Clothe" }
         };
 
+        [ServiceFilter(typeof(ExceptionFilter))]
         public IActionResult Product()
         {
             if (products != null)
