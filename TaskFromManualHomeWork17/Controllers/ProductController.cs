@@ -39,21 +39,15 @@ namespace TaskFromManualHomeWork17.Controllers
 
 
 
-        [HttpPost]
-        [HttpPost]
+        [HttpGet]
         public IActionResult ProductIdGet(int id)
         {
             var product = products.FirstOrDefault(p => p.ProductId == id);
             if (product == null)
             {
-                ViewBag.Message = "Product not found.";
+                return Json(null); 
             }
-            else
-            {
-                ViewBag.Product = product;
-            }
-
-            return View("Product", products);
+            return Json(product);
         }
 
         [HttpPost]
@@ -73,7 +67,7 @@ namespace TaskFromManualHomeWork17.Controllers
             return RedirectToAction("Product");
         }
 
-        [HttpPost]
+        [HttpGet]
         public IActionResult ProductsAmountGet()
         {
             if (products != null)
@@ -83,13 +77,12 @@ namespace TaskFromManualHomeWork17.Controllers
                 {
                     amount += product.ProductAmount;
                 }
-                ViewBag.Amount = amount;
+                return Json(amount);
             }
             else
             {
-                ViewBag.Amount = 0;
+                return Json(null);
             }
-            return View("Product", products);
             
         }
 
