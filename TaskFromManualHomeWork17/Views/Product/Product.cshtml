@@ -63,13 +63,13 @@
 </table>
 
 <h1>Продукт по ID:</h1>
-<form asp-controller="Product" asp-action="ProductIdGet" method="post">
-    <div class="form-group">
-        <label for="id">Product ID:</label>
-        <input type="number" class="form-control" id="id" name="id" required>
-    </div>
-    <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Найти продукт</button>
+<form id="productForm">
+    <label for="productId">Введите ID продукта:</label>
+    <input type="text" id="productId" name="productId" />
+    <button type="button" onclick="getProductDetails()">Получить информацию о продукте</button>
 </form>
+
+<div id="productDetails"></div>
 
 @if (ViewBag.Product != null)
 {
@@ -86,9 +86,11 @@ else if (ViewBag.Message != null)
 }
 
 <h1>Количество продуктов:</h1>
-<form asp-controller="Product" asp-action="ProductsAmountGet" method="post">
-    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Посчитать количество</button>
+<form asp-controller="Product" asp-action="ProductsAmountGet" method="get">
+    <button type="button" onclick="getAmount()" class="btn btn-primary" style="margin-top: 10px;">Посчитать количество</button>
 </form>
+
+<div id="productAmount"></div>
 
 @if (ViewBag.Amount != null)
 {
@@ -120,6 +122,57 @@ else if (ViewBag.Message != null)
 }
 
 <script>
+
+    function getProductDetails() {
+        var productId = document.getElementById('productId').value;
+
+        $.ajax({
+            url: '/Product/ProductIdGet',
+            type: 'GET',
+            data: { id: productId },
+            success: function (data) {
+                if (data) {
+                    var productHtml = `
+                        <h2>Детали продукта:</h2>
+                        <p><strong>ID:</strong> ${data.productId}</p>
+                        <p><strong>Название:</strong> ${data.productName}</p>
+                        <p><strong>Количество:</strong> ${data.productAmount}</p>
+                        <p><strong>Категория:</strong> ${data.category}</p>
+                    `;
+                    $('#productDetails').html(productHtml);
+                } else {
+                    $('#productDetails').html('<p>Продукт не найден.</p>');
+                }
+            },
+            error: function () {
+                $('#productDetails').html('<p>Ошибка при получении данных о продукте.</p>');
+            }
+        });
+    }
+
+    function getAmount() {
+        $.ajax({
+            url: '/Product/ProductsAmountGet',
+            type: 'GET',
+            data: { },
+            success: function(data){
+                if (data) {
+                    console.log(data);
+                    var result = `
+                        <h2>Количество продуктов: ${data}</h2>
+                    `;
+                    $('#productAmount').html(result);
+                }
+                else{
+                    $('#productAmount').html('<p>Не удалось посчитать количество продуктов.</p>');
+                }
+            },
+            error: function () {
+                $('#productAmount').html('<p>Ошибка при получении данных о количестве продуктов.</p>');
+            }
+        })
+    }
+
     function showTable() {
         var table = document.getElementById("productTable");
         table.style.display = "table";
