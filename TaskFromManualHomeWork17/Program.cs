@@ -1,3 +1,6 @@
+using TaskFromManualHomeWork17.Filters;
+using TaskFromManualHomeWork17.Middlewere;
+
 namespace TaskFromManualHomeWork17
 {
     public class Program
@@ -8,9 +11,13 @@ namespace TaskFromManualHomeWork17
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<ExceptionFilter>();
+            builder.Services.AddScoped<RequestTimeFilter>();
+
 
             var app = builder.Build();
-
+            app.UseMiddleware<MiddlewereExceptions>();
+            app.UseMiddleware<ResponseTimeMiddlewere>();
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {

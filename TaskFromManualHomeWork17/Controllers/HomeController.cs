@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using TaskFromManualHomeWork17.Filters;
 using TaskFromManualHomeWork17.Models;
 
 namespace TaskFromManualHomeWork17.Controllers
@@ -18,6 +19,7 @@ namespace TaskFromManualHomeWork17.Controllers
             return View();
         }
 
+        [ServiceFilter(typeof(RequestTimeFilter))]
         public IActionResult Privacy()
         {
             return View();
