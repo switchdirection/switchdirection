@@ -14,10 +14,16 @@ namespace TaskFromManualHomeWork17.Middlewere
         public async Task InvokeAsync(HttpContext context)
         {
             var stopwatch = Stopwatch.StartNew();
+
+            context.Response.OnStarting(() =>
+            {
+                stopwatch.Stop();
+                var elapsedMilliseconds = stopwatch.ElapsedMilliseconds;
+                context.Response.Headers["X-Response-Time-ms"] = elapsedMilliseconds.ToString();
+
+                return Task.CompletedTask;
+            });
             await _next(context);
-            stopwatch.Stop();
-            var elapsedMilliseconds = stopwatch.ElapsedMilliseconds;
-            await Console.Out.WriteLineAsync(elapsedMilliseconds.ToString());
         }
     }
 }

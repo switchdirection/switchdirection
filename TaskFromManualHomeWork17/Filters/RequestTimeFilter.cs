@@ -14,10 +14,15 @@ namespace TaskFromManualHomeWork17.Filters
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            _stopwatch.Stop();
-            var elapsedMilliseconds = _stopwatch.ElapsedMilliseconds;
-            Console.WriteLine($"Request completed in {elapsedMilliseconds} ms");
 
+            context.HttpContext.Response.OnStarting(() =>
+            {
+                _stopwatch.Stop();
+                var elapsedMilliseconds = _stopwatch.ElapsedMilliseconds;
+                context.HttpContext.Response.Headers["X-Response-Time-FromFilter-ms"] = elapsedMilliseconds.ToString();
+                Console.WriteLine(elapsedMilliseconds.ToString());
+                return Task.CompletedTask;
+            });
         }
     }
 }
